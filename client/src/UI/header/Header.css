@@ -1,0 +1,11 @@
+.header {
+    height: 1.7rem;
+    background-color: blue;
+}
+
+.title {
+    color: white;
+    display: flex;
+    padding: .5em;
+    font-size: .8rem;
+}

@@ -1,0 +1,12 @@
+.footer {
+    background-color: black;
+    color: white;
+
+}
+
+.title {
+    font-size: .6rem;
+    padding: 1cqh 0;
+    display: flex;
+    justify-content: center;
+}

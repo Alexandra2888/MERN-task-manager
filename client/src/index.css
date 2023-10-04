@@ -216,7 +216,7 @@ textarea {
 
 .task-form,
 .single-task-form {
-  width: 90vw;
+  width: 100vh;
   max-width: var(--fixed-width);
   margin: 0 auto;
   margin-top: 6rem;
@@ -333,6 +333,7 @@ form > :last-child {
 .tasks-container {
   width: 100%;
   width: 90vw;
+  height: calc(100vh - 18rem);
   max-width: var(--fixed-width);
   margin: 0 auto;
   margin-top: 2rem;

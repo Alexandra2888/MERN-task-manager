@@ -1,9 +1,11 @@
+import "./Header.css";
+
 
 function Header() {
   return (
-    <div>
-      Header
-    </div>
+<header className='header'>
+  <div className='title'>Task Manager</div>
+</header>
   )
 }
 
