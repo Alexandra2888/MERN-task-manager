@@ -11,6 +11,23 @@ function Task() {
   const [isLoading, setIsLoading] = useState(true); 
 
 
+
+  const deleteTask = async (id) => {
+    try {
+      const headers = {
+        "Content-Type": "application/json",
+      };
+
+      await axios.delete(`http://localhost:8000/api/v1/tasks/${id}`, {
+        headers,
+      });
+
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+    } catch (error) {
+      console.error("Error deleting task:", error);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -80,7 +97,7 @@ function Task() {
           <div className="tasks">
             {tasks.map((task) => (
               <div key={task.id} className="task-item">
-             <FaEdit/>   {task.name} <RiDeleteBin6Line/>
+             <FaEdit/>   {task.name} <RiDeleteBin6Line onClick={() => deleteTask(task._id)}/>
               </div>
             ))}
           </div>
