@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomeLayout } from "./pages/homeLayout";
 import {NotFound} from "./pages/notFound";
-import {EditTask} from "./components/editTask";
+import {EditTask} from "./pages/editTask";
 import {Task} from "./components/task";
 import {Home} from "./pages/home";
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     element: <Task/>
   },
   {
-    path: '/edit-task',
+    path: '/edit-task/:id',
     element: <EditTask/>
   }
 ]);

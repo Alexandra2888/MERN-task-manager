@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import { Link} from "react-router-dom";
 
 import {FaEdit} from "react-icons/fa";
 import {RiDeleteBin6Line} from "react-icons/ri";
@@ -97,7 +98,11 @@ function Task() {
           <div className="tasks">
             {tasks.map((task) => (
               <div key={task.id} className="task-item">
-             <FaEdit/>   {task.name} <RiDeleteBin6Line onClick={() => deleteTask(task._id)}/>
+                <Link to={`/edit-task/${task._id}`}>
+                  <FaEdit />
+                </Link>
+                {task.name}
+                <RiDeleteBin6Line onClick={() => deleteTask(task._id)} />
               </div>
             ))}
           </div>
